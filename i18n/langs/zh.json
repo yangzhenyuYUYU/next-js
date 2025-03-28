@@ -1,0 +1,68 @@
+{
+    "site": {
+      "title": "Next.js通用模板",
+      "description": "一个基于Next.js的现代化Web应用模板，支持国际化、主题切换等功能"
+    },
+    "page": {
+      "title": "Next.js通用模板",
+      "desc": "一个功能完整的Next.js应用模板"
+    },
+    "home": {
+      "title": "欢迎使用Next.js通用模板",
+      "desc": "这是一个功能完整的Next.js应用模板"
+    },
+    "pricing": {
+      "standard": {
+        "name": "标准版",
+        "price": "¥99",
+        "description": "适合个人开发者和小型项目",
+        "features": [
+          "基础功能支持",
+          "每月 1000 次调用",
+          "邮件支持",
+          "基础文档访问"
+        ]
+      },
+      "pro": {
+        "name": "专业版",
+        "price": "¥299",
+        "description": "适合中小型企业和团队",
+        "features": [
+          "所有标准版功能",
+          "每月 10000 次调用",
+          "优先邮件支持",
+          "高级文档访问",
+          "API 访问",
+          "团队协作"
+        ]
+      },
+      "enterprise": {
+        "name": "企业版",
+        "price": "¥999",
+        "description": "适合大型企业和组织",
+        "features": [
+          "所有专业版功能",
+          "无限次调用",
+          "24/7 技术支持",
+          "专属客户经理",
+          "自定义功能开发",
+          "SLA 保障"
+        ]
+      },
+      "per_month": "/月",
+      "buy_now": "立即购买",
+      "payment": {
+        "title": "选择支付方式",
+        "description": "请选择您喜欢的支付方式完成购买",
+        "cancel": "取消",
+        "pay_now": "立即支付",
+        "processing": "处理中...",
+        "methods": {
+          "alipay": "支付宝",
+          "wechat": "微信支付",
+          "card": "银行卡"
+        }
+      }
+    }
+}
+  

@@ -1,0 +1,70 @@
+{
+    "site": {
+      "title": "Next.js Universal Template",
+      "description": "A modern web application template based on Next.js with internationalization and theme switching support"
+    },
+    "page": {
+      "title": "Next.js Universal Template",
+      "desc": "A feature-rich Next.js application template"
+    },
+    "home": {
+      "title": "Welcome to Next.js Universal Template",
+      "desc": "This is a feature-rich Next.js application template"
+    },
+    "pricing": {
+      "standard": {
+        "name": "Standard",
+        "description": "Perfect for individual developers and small projects",
+        "price": "$99",
+        "period": "month",
+        "features": [
+          "Basic feature support",
+          "1,000 calls per month",
+          "Email support",
+          "Basic documentation access"
+        ]
+      },
+      "pro": {
+        "name": "Professional",
+        "description": "Ideal for small and medium businesses",
+        "price": "$299",
+        "period": "month",
+        "features": [
+          "All Standard features",
+          "10,000 calls per month",
+          "Priority email support",
+          "Advanced documentation",
+          "API access",
+          "Team collaboration"
+        ]
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "description": "For large organizations",
+        "price": "$999",
+        "period": "month",
+        "features": [
+          "All Professional features",
+          "Unlimited calls",
+          "24/7 technical support",
+          "Dedicated account manager",
+          "Custom feature development",
+          "SLA guarantee"
+        ]
+      },
+      "per_month": "/month",
+      "buy_now": "Buy Now",
+      "payment": {
+        "title": "Select Payment Method",
+        "description": "Choose your preferred payment method",
+        "cancel": "Cancel",
+        "pay_now": "Pay Now",
+        "processing": "Processing...",
+        "methods": {
+          "alipay": "Alipay",
+          "wechat": "WeChat Pay",
+          "card": "Credit Card"
+        }
+      }
+    }
+} 
