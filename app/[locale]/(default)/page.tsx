@@ -1,4 +1,4 @@
-import { getDictionary } from "./locale";
+import { getDictionary } from "../locale";
 import { ThemeToggle } from "@/components/theme/toggle";
 import { LanguageToggle } from "@/components/language/toggle";
 import { LoginButton } from "@/components/auth/login-button";
@@ -6,13 +6,13 @@ import { PricingCards } from "@/components/pricing/pricing-cards";
 
 type Props = {
   params: {
-    lang: string;
+    locale: string;
   };
 };
 
 export async function generateMetadata({ params }: Props) {
   try {
-    const t = await getDictionary(params.lang);
+    const t = await getDictionary(params.locale);
     return {
       title: t.page.title,
       description: t.page.desc,
@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: Props) {
 
 export default async function Home({ params }: Props) {
   try {
-    const t = await getDictionary(params.lang);
+    const t = await getDictionary(params.locale);
     
     return (
       <main className="flex min-h-screen flex-col items-center p-24">
