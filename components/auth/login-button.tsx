@@ -11,10 +11,12 @@ import {
 } from '@/components/ui/dialog';
 import { Icons } from '@/components/ui/icons';
 import { signIn } from 'next-auth/react';
+import { useTranslations } from 'next-intl';
 
 export function LoginButton() {
   const [isLoading, setIsLoading] = useState<boolean>(false);
-
+  const t = useTranslations("auth");
+  
   const handleLogin = async (provider: string) => {
     setIsLoading(true);
     try {
@@ -30,12 +32,12 @@ export function LoginButton() {
     <Dialog>
       <DialogTrigger asChild>
         <Button variant="outline" size="sm">
-          登录
+          {t('login')}
         </Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
-          <DialogTitle>选择登录方式</DialogTitle>
+          <DialogTitle>{t('choose_method')}</DialogTitle>
         </DialogHeader>
         <div className="grid gap-4 py-4">
           <Button
@@ -44,7 +46,7 @@ export function LoginButton() {
             disabled={isLoading}
           >
             <Icons.google className="mr-2 h-4 w-4" />
-            使用 Google 登录
+            {t('google')}
           </Button>
           <Button
             variant="outline"
@@ -52,7 +54,7 @@ export function LoginButton() {
             disabled={isLoading}
           >
             <Icons.gitHub className="mr-2 h-4 w-4" />
-            使用 GitHub 登录
+            {t('github')}
           </Button>
           <Button
             variant="outline"
@@ -60,7 +62,7 @@ export function LoginButton() {
             disabled={isLoading}
           >
             <Icons.wechat className="mr-2 h-4 w-4" />
-            使用微信登录
+            {t('wechat')}
           </Button>
           <div className="relative">
             <div className="absolute inset-0 flex items-center">
@@ -78,7 +80,7 @@ export function LoginButton() {
             disabled={isLoading}
           >
             <Icons.mail className="mr-2 h-4 w-4" />
-            使用邮箱登录
+            {t('email')}
           </Button>
           <Button
             variant="outline"
@@ -86,7 +88,7 @@ export function LoginButton() {
             disabled={isLoading}
           >
             <Icons.phone className="mr-2 h-4 w-4" />
-            使用手机号登录
+            {t('phone')}
           </Button>
         </div>
       </DialogContent>

@@ -20,8 +20,22 @@ export function LanguageToggle() {
   const router = useRouter()
 
   const switchLanguage = (langCode: string) => {
-    const newPathname = pathname.replace(/\/(en|zh)/, `/${langCode}`)
-    router.push(newPathname)
+    let newPathname;
+    if (pathname === '/') {
+      // If pathname is root, directly prepend the language code
+      newPathname = `/${langCode}`;
+    } else {
+      // Check if pathname already has a language prefix
+      const hasLangPrefix = /^\/(en|zh)/.test(pathname);
+      if (hasLangPrefix) {
+        // Replace existing language code
+        newPathname = pathname.replace(/^\/(en|zh)/, `/${langCode}`);
+      } else {
+        // Add language code prefix
+        newPathname = `/${langCode}${pathname}`;
+      }
+    }
+    router.push(newPathname);
   }
 
   return (

@@ -7,6 +7,15 @@
       "title": "Next.js Universal Template",
       "desc": "A feature-rich Next.js application template"
     },
+    "auth": {
+      "login": "SignIn",
+      "choose_method": "Choose Login Method",
+      "google": "Sign in with Google",
+      "github": "Sign in with GitHub",
+      "wechat": "Sign in with WeChat",
+      "phone": "Sign in with Phone Number",
+      "email": "Sign in with Email"
+    },
     "home": {
       "title": "Welcome to Next.js Universal Template",
       "desc": "This is a feature-rich Next.js application template"

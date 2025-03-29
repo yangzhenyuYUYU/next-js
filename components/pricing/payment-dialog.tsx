@@ -13,6 +13,7 @@ import { Button } from '@/components/ui/button';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Label } from '@/components/ui/label';
 import { Icons } from '@/components/ui/icons';
+import { useTranslations } from 'next-intl';
 
 interface PaymentDialogProps {
   open: boolean;
@@ -20,27 +21,31 @@ interface PaymentDialogProps {
   tier: string | null;
 }
 
-const paymentMethods = [
-  {
-    id: 'alipay',
-    name: '支付宝',
-    icon: Icons.alipay,
-  },
-  {
-    id: 'wechat',
-    name: '微信支付',
-    icon: Icons.wechat,
-  },
-  {
-    id: 'card',
-    name: '银行卡',
-    icon: Icons.card,
-  },
-];
-
 export function PaymentDialog({ open, onOpenChange, tier }: PaymentDialogProps) {
   const [selectedMethod, setSelectedMethod] = useState<string>('');
   const [isProcessing, setIsProcessing] = useState(false);
+  
+  // Use the useTranslations hook to get the t function for the "pricing.payment" namespace
+  const t = useTranslations("pricing.payment");
+  const methods = useTranslations("pricing.payment.methods");
+
+  const paymentMethods = [
+    {
+      id: 'alipay',
+      name: methods("alipay"),
+      icon: Icons.alipay,
+    },
+    {
+      id: 'wechat',
+      name: methods("wechat"),
+      icon: Icons.wechat,
+    },
+    {
+      id: 'card',
+      name: methods("card"),
+      icon: Icons.card,
+    },
+  ];
 
   const handlePayment = async () => {
     if (!selectedMethod) return;
@@ -62,9 +67,9 @@ export function PaymentDialog({ open, onOpenChange, tier }: PaymentDialogProps) 
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
-          <DialogTitle>选择支付方式</DialogTitle>
+          <DialogTitle>{t("title")}</DialogTitle>
           <DialogDescription>
-            请选择您喜欢的支付方式完成购买
+            {t("description")}
           </DialogDescription>
         </DialogHeader>
         <div className="py-4">
@@ -99,13 +104,13 @@ export function PaymentDialog({ open, onOpenChange, tier }: PaymentDialogProps) 
             onClick={() => onOpenChange(false)}
             disabled={isProcessing}
           >
-            取消
+            {t("cancel")}
           </Button>
           <Button
             onClick={handlePayment}
             disabled={!selectedMethod || isProcessing}
           >
-            {isProcessing ? '处理中...' : '立即支付'}
+            {isProcessing ? t("processing") : t("pay_now")}
           </Button>
         </DialogFooter>
       </DialogContent>

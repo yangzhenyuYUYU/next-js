@@ -7,6 +7,15 @@
       "title": "Next.js通用模板",
       "desc": "一个功能完整的Next.js应用模板"
     },
+    "auth": {
+      "login": "登录",
+      "choose_method": "选择登录方式",
+      "google": "使用 Google 登录",
+      "github": "使用 GitHub 登录",
+      "wechat": "使用微信登录",
+      "phone": "使用手机号登录",
+      "email": "使用邮箱登录"
+    },
     "home": {
       "title": "欢迎使用Next.js通用模板",
       "desc": "这是一个功能完整的Next.js应用模板"
