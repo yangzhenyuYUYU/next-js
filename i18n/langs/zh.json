@@ -14,7 +14,8 @@
       "github": "使用 GitHub 登录",
       "wechat": "使用微信登录",
       "phone": "使用手机号登录",
-      "email": "使用邮箱登录"
+      "email": "使用邮箱登录",
+      "or": "或者"
     },
     "home": {
       "title": "欢迎使用Next.js通用模板",

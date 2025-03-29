@@ -14,7 +14,8 @@
       "github": "Sign in with GitHub",
       "wechat": "Sign in with WeChat",
       "phone": "Sign in with Phone Number",
-      "email": "Sign in with Email"
+      "email": "Sign in with Email",
+      "or": "Or"
     },
     "home": {
       "title": "Welcome to Next.js Universal Template",

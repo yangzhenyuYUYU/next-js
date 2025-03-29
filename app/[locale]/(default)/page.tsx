@@ -1,6 +1,5 @@
 import { getDictionary } from "../locale";
-// import PricingWrapper from "@/components/pricing/pricing-wrapper";
-import { PricingCards } from "@/components/pricing/pricing-cards";
+import { PricingCards } from "@/components/cards/pricing-cards";
 
 type Props = {
   params: {
