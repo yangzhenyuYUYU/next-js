@@ -1,25 +1,12 @@
-import { getDictionary } from "../locale";
 import { PricingCards } from "@/components/cards/pricing-cards";
+import Title from "@/components/blocks/title";
 
-type Props = {
-  params: {
-    locale: string;
-  };
-};
-
-
-export default async function Home({ params }: Props) {
+export default async function Home() {
   try {
-    const t = await getDictionary(params.locale);
-    
     return (
       <main className="flex min-h-screen flex-col items-center p-24">
-
         <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold mb-4">{t.home.title}</h1>
-            <p className="text-xl text-muted-foreground">{t.home.desc}</p>
-          </div>
+          <Title />
           <div className="mt-8">
             <PricingCards />
           </div>
