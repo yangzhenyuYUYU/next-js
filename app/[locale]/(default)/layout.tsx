@@ -8,12 +8,13 @@ export default function DefaultLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  
   const params = useParams();
   const locale = params.locale as string || 'zh'; // Fallback to 'zh' if no locale
   return (
     <I18nClientProvider locale={locale}>
-    <Header />
-    <main className="overflow-x-hidden">{children}</main>
+      <Header />
+      <main className="overflow-x-hidden">{children}</main>
     </I18nClientProvider>
   );
 }

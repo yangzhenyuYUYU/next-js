@@ -18,6 +18,7 @@ export function LoginButton() {
   const t = useTranslations("auth");
   
   const handleLogin = async (provider: string) => {
+    
     setIsLoading(true);
     try {
       await signIn(provider, { callbackUrl: '/' });

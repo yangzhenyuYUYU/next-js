@@ -1,3 +1,8 @@
-import { handlers } from "@/auth";
+import NextAuth from "next-auth";
+import { options } from "./options";
 
-export const { GET, POST } = handlers;
+const handler = NextAuth(options);
+
+export { handler as GET, handler as POST };
+
+
