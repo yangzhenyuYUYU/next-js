@@ -27,7 +27,22 @@
       "phone_placeholder": "Enter your phone number",
       "verification_code": "Verification Code",
       "code_placeholder": "Enter verification code",
-      "send_code": "Send Code"
+      "send_code": "Send Code",
+      "errors": {
+        "missing_params": "Missing required parameters",
+        "invalid_email": "Invalid email format",
+        "invalid_phone": "Invalid phone number format",
+        "send_failed": "Failed to send verification code",
+        "get_code_first": "Please get verification code first",
+        "wrong_code": "Wrong verification code",
+        "login_failed": "Login failed, please try again",
+        "username_password_error": "Incorrect username or password"
+      },
+      "success": {
+        "code_sent": "Verification code sent to {target}",
+        "code_title": "Verification Code",
+        "resend_countdown": "Resend in {seconds}s"
+      }
     },
     "home": {
       "title": "Welcome to Next.js Universal Template",
