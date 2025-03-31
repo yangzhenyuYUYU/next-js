@@ -3,6 +3,7 @@ import {
   Mail,
   Phone,
   CreditCard,
+  LogOut,
   type LucideIcon,
 } from "lucide-react";
 
@@ -13,6 +14,7 @@ export const Icons = {
   mail: Mail,
   phone: Phone,
   card: CreditCard,
+  logOut: LogOut,
   google: ({ ...props }) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"

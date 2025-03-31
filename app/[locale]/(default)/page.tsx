@@ -1,12 +1,7 @@
 import { PricingCards } from "@/components/cards/pricing-cards";
 import Title from "@/components/blocks/title";
-import { getServerSession } from "next-auth/next";
-import { options } from "@/app/api/auth/[...nextauth]/options";
 
 export default async function Home() {
-  const session = await getServerSession(options);
-  console.log('session', session);
-  
   try {
     return (
       <main className="flex min-h-screen flex-col items-center p-24">

@@ -21,7 +21,7 @@ export const options: NextAuthOptions = {
             },
             async authorize(credentials) {
                 console.log('credentials', credentials);
-                
+                // TODO: 从数据库中获取用户
                 const user = { id: "42", name: "J Smith", password: "123456", username: "jsmith", email: "jsmith@example.com" };
                 if (credentials?.username === user.username && credentials?.password === user.password) {
                     return user;
@@ -31,5 +31,35 @@ export const options: NextAuthOptions = {
             }
         })
     ],
+    pages: {
+        signIn: '/login',
+    },
+    callbacks: {
+        async signIn({ user }) {
+            // console.log('signIn', user);
+            return true;
+        },
+        async jwt({ token, user }) {
+            // console.log('jwt', token, user);
+            return token;
+        },
+        async authorized({ auth, request: { nextUrl } }) {
+            const isLoggedIn = !!auth?.user;
+            const isOnDashboard = nextUrl.pathname.startsWith('/dashboard');
+
+            if (isOnDashboard) {
+                if (isLoggedIn) return true;
+                return false;
+            } else if (isLoggedIn) {
+                return Response.redirect(new URL('/dashboard', nextUrl));
+            }
+            return true;
+        },
+        async session({ session, user }) {
+            // console.log('session', session);
+            // console.log('user', user);
+            return session;
+        }
+    }
 }
 

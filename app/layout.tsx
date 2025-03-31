@@ -31,7 +31,6 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const session = await getServerSession(options);
-  console.log('session', session);
   
   return (
     <html lang="en" suppressHydrationWarning>
@@ -44,7 +43,7 @@ export default async function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <AuthProvider>
+          <AuthProvider session={session}>
             {children}
           </AuthProvider>
         </ThemeProvider>

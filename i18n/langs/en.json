@@ -9,13 +9,25 @@
     },
     "auth": {
       "login": "SignIn",
+      "logout": "SignOut",
       "choose_method": "Choose Login Method",
       "google": "Sign in with Google",
       "github": "Sign in with GitHub",
       "wechat": "Sign in with WeChat",
       "phone": "Sign in with Phone Number",
       "email": "Sign in with Email",
-      "or": "Or"
+      "or": "Or",
+      "username_password": "Username/Password Login",
+      "username": "Username",
+      "password": "Password",
+      "username_placeholder": "Enter your username",
+      "password_placeholder": "Enter your password",
+      "back": "Back",
+      "email_placeholder": "Enter your email",
+      "phone_placeholder": "Enter your phone number",
+      "verification_code": "Verification Code",
+      "code_placeholder": "Enter verification code",
+      "send_code": "Send Code"
     },
     "home": {
       "title": "Welcome to Next.js Universal Template",

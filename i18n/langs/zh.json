@@ -9,13 +9,25 @@
     },
     "auth": {
       "login": "登录",
+      "logout": "退出登录",
       "choose_method": "选择登录方式",
       "google": "使用 Google 登录",
       "github": "使用 GitHub 登录",
       "wechat": "使用微信登录",
       "phone": "使用手机号登录",
       "email": "使用邮箱登录",
-      "or": "或者"
+      "or": "或者",
+      "username_password": "账号密码登录",
+      "username": "用户名",
+      "password": "密码",
+      "username_placeholder": "请输入用户名",
+      "password_placeholder": "请输入密码",
+      "back": "返回",
+      "email_placeholder": "请输入邮箱",
+      "phone_placeholder": "请输入手机号",
+      "verification_code": "验证码",
+      "code_placeholder": "请输入验证码",
+      "send_code": "发送验证码"
     },
     "home": {
       "title": "欢迎使用Next.js通用模板",
